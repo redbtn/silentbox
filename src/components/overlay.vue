@@ -40,11 +40,15 @@
             <!-- local/embed image rendering -->
             <img v-else :srcset="overlayItem.srcSet ? overlayItem.srcSet : overlayItem.src" :src="overlayItem.src" :alt="overlayItem.alt" width="auto" height="auto" >
           </div>
-          <p
+          <!--<p
             id="silentbox-overlay__description"
             v-if="overlayItem.description">
               {{ overlayItem.description }}
-          </p>
+          </p>-->
+          <!-- html rendering on description -->
+          <div
+            id="silentbox-overlay__description"
+            v-html="overlayItem.description">
         </div>
       </div>
     </transition>
